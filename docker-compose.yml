@@ -1,0 +1,15 @@
+version: '2'
+
+services:
+  vpn:
+    build: ./vpn
+    restart: 'no'
+    volumes:
+      - 'resin_cfg:/root/.resin'
+      - 'vpn:/usr/src/app'
+    network_mode: host
+    privileged: true
+
+volumes:
+  vpn:
+    driver: local
