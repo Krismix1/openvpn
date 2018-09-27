@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-file_path="$(pwd)/client.ovpn"
+file_path="/usr/vpn/client.ovpn"
 until [ -f $file_path ]; do
     echo "No client config file found"
     sleep 60
